@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Siddharth Jain</title>
+        <style>
+            body{
+                font-family: "verdana", sans-serif;
+                background-color: #e4f5ff;
+                border: solid 0.5em #094f6e;
+                width: 80%;
+                padding: 2em;
+                margin: 1em auto;
+                box-shadow: 2px 2px 2px #2d7a9c;
+            }
+            h1{
+                text-align: center;
+            }
+            img {
+
+                max-width: 90%;
+                height: auto;
+                margin: auto;
+            }
+        </style>
+    </head>
+    <body>
+            <h1>Siddharth Virendra Jain</h1>
+        <div>
+            <img class="slides" src="Siddharth_Images/photo1.jpg" alt="drawing">
+            <img class="slides" src="Siddharth_Images/photo2.jpg" alt="sketching">
+            <img class="slides"  src="Siddharth_Images/photo3.jpg" alt="reading">
+            <img class="slides" src="Siddharth_Images/photo4.jpg" alt="history">
+            <img class="slides" src="Siddharth_Images/photo5.jpg" alt="food">
+        </div>
+        <script>
+                document.write("<p>Hello, My Name is Siddharth Jain. I am from Mumbai, India. I have completed my bachelors in computer in the year 2018 and about my work experience i've been working as an Business Development Executive in an E-Commerce company. My hobbies are drawing, sketching which makes me stress free and i am interested in various sports and reading history and general knowledge. </p>")
+            var myIndex = 0;
+            var slideshow = function() {
+                var s = document.getElementsByClassName("slides");
+                for(var i = 0; i < s.length; i++) {
+                    s[i].style.display = "none";
+                }
+                myIndex++;
+                if(myIndex > s.length){
+                    myIndex = 1;
+                }
+                s[myIndex-1].style.display = "block";
+                setTimeout(slideshow, 1000);
+            }
+            slideshow();
+        </script>
+    </body>
+</html>
